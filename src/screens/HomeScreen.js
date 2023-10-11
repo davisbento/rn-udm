@@ -1,14 +1,14 @@
-import React from "react";
-import { Text, StyleSheet } from "react-native";
+import React from 'react';
+import { Button, View } from 'react-native';
 
-const HomeScreen = () => {
-  return <Text style={styles.text}>HomeScreen</Text>;
+const HomeScreen = ({ navigation }) => {
+	return (
+		<View>
+			<Button title='Go to Components Demo' onPress={() => navigation.navigate('Components')} />
+			<Button title='Go to List Demo' onPress={() => navigation.navigate('List')} />
+			<Button title='Go to Images Demo' onPress={() => navigation.navigate('Images')} />
+		</View>
+	);
 };
-
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 30,
-  },
-});
 
 export default HomeScreen;
